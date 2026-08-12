@@ -1,16 +1,17 @@
 @import "tailwindcss";
 @import 'tailwind-scrollbar-hide/v4';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --text-size-100: 1rem;
+  --text-size-200: 1.2rem;
+  --text-size-300: 1.5rem;
+  --text-size-600: 2.75rem;
+  --text-size-900: 8rem;
+
+  --font-bodoni: var(--font-bodoni), serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +24,14 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  #hero {
+    @apply relative z-10 min-h-dvh w-full border border-transparent;
+
+    .text-title {
+      @apply text-size-900 text-center leading-none;
+    }
+  }
 }
