@@ -20,7 +20,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`h-full antialiased scrollbar-hide`}
     >
-      <body className={`${bodoniModa.className} min-h-full flex flex-col`}>{children}</body>
+      <body className={`${bodoniModa.className}`}>{children}</body>
     </html>
   );
 }

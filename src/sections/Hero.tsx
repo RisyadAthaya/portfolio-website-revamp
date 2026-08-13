@@ -1,7 +1,9 @@
+import AnimatedHeroText from "@/src/components/AnimatedHeroText";
+
 export default function Hero() {
   return (
-    <section id="hero" className="noise">
-      <h1 className="text-title">ATHAYA</h1>
+    <section id="hero" className="mt-40">
+      <AnimatedHeroText />
     </section>
   )
 }
