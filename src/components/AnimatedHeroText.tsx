@@ -14,7 +14,7 @@ export default function AnimatedHeroText() {
     timeline.to('.text-title', {
       opacity: 1,
       yPercent: 0,
-      duration: 1,
+      duration: 1.75,
       ease: "power1.out"
     })
 
