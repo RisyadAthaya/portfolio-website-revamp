@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col justify-center items-center min-h-dvh w-full overflow-hidden">
       <AnimatedHeroText />
-      <div aria-hidden="true" className="flex flex-col items-center absolute inset-0 z-0">
+      <div aria-hidden="true" className="flex flex-col items-center absolute inset-0 z-0 pointer-events-none">
         <video
           loop
           autoPlay

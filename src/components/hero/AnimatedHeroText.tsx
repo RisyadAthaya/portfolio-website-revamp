@@ -37,8 +37,8 @@ export default function AnimatedHeroText() {
         .call(() => {
           subtitleElement.textContent = text
         })
-        .to(subtitleElement, { opacity: 1, xPercent: 0, duration: 1, ease: 'power1.out' })
-        .to(subtitleElement, { opacity: 0, xPercent: 10, duration: 0.7, ease: 'power1.in' })
+        .to(subtitleElement, { opacity: 1, xPercent: 0, duration: 1.4, ease: 'power1.out' })
+        .to(subtitleElement, { opacity: 0, xPercent: 10, duration: 1, ease: 'power1.in' })
         .set(subtitleElement, { xPercent: -10 })
     })
 
