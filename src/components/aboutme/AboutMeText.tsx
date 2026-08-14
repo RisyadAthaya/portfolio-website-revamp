@@ -30,7 +30,7 @@ export default function AboutMeText() {
 
   return (
     <div ref={containerRef} className="relative">
-      <p className="text-size-400">
+      <p className="text-size-400 md:text-size-500">
         Creating digital solutions. Currently learning toward becoming an AI engineer.
       </p>
       <div

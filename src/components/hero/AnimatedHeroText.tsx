@@ -10,7 +10,7 @@ export default function AnimatedHeroText() {
   const containerRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
-  const subtitleClasses = 'text-subtitle text-size-300 md:text-size-400 top-0'
+  const subtitleClasses = 'text-subtitle text-size-300 md:text-size-500 top-0'
   const subtitleTexts = ['CSUI Student', 'AI Engineer', 'Software Engineer']
 
   useGSAP(() => {
