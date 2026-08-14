@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 import { Orbitron } from 'next/font/google'
-import "../styles/globals.css";
+import ScrollToTop from '@/src/components/ScrollToTop'
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: "Risyad Athaya",
@@ -20,7 +21,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`h-full antialiased scrollbar-hide`}
     >
-      <body className={`${orbitron.className}`}>{children}</body>
+      <body className={`${orbitron.className}`}>
+        <ScrollToTop />
+        {children}
+      </body>
     </html>
   );
 }
