@@ -12,7 +12,7 @@ export default function Hero() {
           playsInline
           preload="auto"
           src="/videos/synthwaveBackground.mp4"
-          className="min-h-dvh object-cover"
+          className="min-h-dvh w-full object-cover"
         />
       </div>
     </section>
