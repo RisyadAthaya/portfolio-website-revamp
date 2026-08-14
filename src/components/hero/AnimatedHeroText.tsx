@@ -52,7 +52,7 @@ export default function AnimatedHeroText() {
       </h1>
       <span className="flex justify-center">
         <p className={subtitleClasses} ref={subtitleRef}>
-          Dummy
+          CSUI Student
         </p>
       </span>
     </div>
