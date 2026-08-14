@@ -1,42 +1,58 @@
 'use client'
 
+import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 gsap.registerPlugin(useGSAP)
 
 export default function AnimatedHeroText() {
-  useGSAP(() => {
-    const timeline = gsap.timeline({})
-    gsap.set('.text-title', { opacity: 0, yPercent: 60 })
-    gsap.set('.text-subtitle', { opacity: 0, yPercent: 40 })
+  const containerRef = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
+  const subtitleRef = useRef<HTMLParagraphElement>(null)
+  const subtitleClasses = 'text-subtitle text-size-300 md:text-size-400 top-0'
+  const subtitleTexts = ['CSUI Student', 'AI Engineer', 'Software Engineer']
 
-    timeline.to('.text-title', {
+  useGSAP(() => {
+    const titleElement = titleRef.current
+    const subtitleElement = subtitleRef.current
+
+    if (!titleElement || !subtitleElement) return
+
+    const timeline = gsap.timeline()
+    timeline.set(titleElement, { opacity: 0, yPercent: 60 })
+    timeline.set(subtitleElement, { opacity: 0, yPercent: 40 })
+
+    timeline.to(titleElement, {
       opacity: 1,
       yPercent: 0,
       duration: 1.5,
-      ease: "power1.out"
+      ease: 'power1.out',
     })
 
     const subtitlesTimeline = gsap.timeline({ repeat: -1 })
-    const subtitles = gsap.utils.toArray('.text-subtitle') as HTMLParagraphElement[]
 
-    subtitles.forEach((sub) => {
+    subtitleTexts.forEach((text) => {
       subtitlesTimeline
-        .to(sub, { opacity: 1, yPercent: 0, duration: 1, ease: 'power1.out' })
-        .to(sub, { opacity: 0, yPercent: 40, duration: 0.7, ease: 'power1.in', delay: 0.4 })
+        .call(() => {
+          subtitleElement.textContent = text
+        })
+        .to(subtitleElement, { opacity: 1, yPercent: 0, duration: 1, ease: 'power1.out' })
+        .to(subtitleElement, { opacity: 0, yPercent: 40, duration: 0.7, ease: 'power1.in' })
     })
 
     timeline.add(subtitlesTimeline)
-  }, [])
+  }, { scope: containerRef })
 
   return (
-    <div className="relative z-10 mt-50 text-center">
-      <h1 className="text-title">ATHAYA</h1>
-      <span className="flex relative justify-center">
-        <p className="text-subtitle absolute">CSUI Student</p>
-        <p className="text-subtitle absolute">Software Engineer</p>
-        <p className="text-subtitle absolute">AI Engineer</p>
+    <div ref={containerRef} className="flex flex-col z-10 items-center justify-center">
+      <h1 ref={titleRef} className="text-title text-size-600 md:text-size-900 leading-none">
+        ATHAYA
+      </h1>
+      <span className="flex justify-center">
+        <p className={subtitleClasses} ref={subtitleRef}>
+          Dummy
+        </p>
       </span>
     </div>
   )

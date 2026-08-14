@@ -10,7 +10,7 @@
   --text-size-200: 1.2rem;
   --text-size-300: 1.5rem;
   --text-size-400: 2.5rem;
-  --text-size-600: 5rem;
+  --text-size-600: 4rem;
   --text-size-900: 8rem;
 
   --font-bodoni: var(--font-bodoni), serif;
@@ -27,22 +27,4 @@ body {
   box-sizing: border-box;
   background: var(--background);
   color: var(--foreground);
-}
-
-@layer components {
-  #hero {
-    @apply relative min-h-dvh w-full overflow-hidden;
-
-    .text-title {
-      @apply text-size-600 md:text-size-900 leading-none;
-    }
-
-    .text-subtitle {
-      @apply text-size-400 top-0;
-    }
-
-    video {
-      @apply w-full object-bottom object-cover md:object-contain;
-    }
-  }
 }
