@@ -4,6 +4,7 @@
 @theme {
   --color-background: #ffffff;
   --color-foreground: #171717;
+  --color-accent: #69d4ff;
 
   --text-size-100: 1rem;
   --text-size-200: 1.2rem;
@@ -23,13 +24,14 @@
 }
 
 body {
+  box-sizing: border-box;
   background: var(--background);
   color: var(--foreground);
 }
 
 @layer components {
   #hero {
-    @apply relative min-h-dvh w-full;
+    @apply relative min-h-dvh w-full overflow-hidden;
 
     .text-title {
       @apply text-size-600 md:text-size-900 leading-none;
@@ -37,6 +39,10 @@ body {
 
     .text-subtitle {
       @apply text-size-400 top-0;
+    }
+
+    video {
+      @apply w-full object-bottom object-cover md:object-contain;
     }
   }
 }

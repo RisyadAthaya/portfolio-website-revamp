@@ -14,7 +14,7 @@ export default function AnimatedHeroText() {
     timeline.to('.text-title', {
       opacity: 1,
       yPercent: 0,
-      duration: 1.75,
+      duration: 1.5,
       ease: "power1.out"
     })
 
@@ -31,7 +31,7 @@ export default function AnimatedHeroText() {
   }, [])
 
   return (
-    <div className="text-center">
+    <div className="relative z-10 mt-50 text-center">
       <h1 className="text-title">ATHAYA</h1>
       <span className="flex relative justify-center">
         <p className="text-subtitle absolute">CSUI Student</p>
