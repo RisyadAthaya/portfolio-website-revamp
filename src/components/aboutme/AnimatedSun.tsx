@@ -1,0 +1,50 @@
+'use client'
+
+import { useRef } from "react"
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
+import gsap from 'gsap'
+
+gsap.registerPlugin(useGSAP, ScrollTrigger)
+
+export default function AboutMeText() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const boxRef = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    const container = containerRef.current
+    const box = boxRef.current
+
+    gsap.to(box, {
+      rotation: 360,
+      borderRadius: '60%',
+      duration: 1,
+      ease: 'power2.inOut',
+      scrollTrigger: {
+        trigger: container,
+        start: 'top bottom',
+        once: true
+      }
+    })
+
+    gsap.to(box, {
+      backgroundColor: 'var(--color-secondary)',
+      ease: 'power1.out',
+      scrollTrigger: {
+        trigger: container,
+        start: 'top 40%',
+        end: 'top 10%',
+        scrub: true
+      }
+    })
+  }, { scope: containerRef })
+
+  return (
+    <div ref={containerRef} className="">
+      <div
+        ref={boxRef}
+        className="w-60 h-60 bg-primary z-10"
+      />
+    </div>
+  )
+}
