@@ -29,11 +29,11 @@ export default function AboutMeText() {
 
     gsap.to(box, {
       backgroundColor: 'var(--color-secondary)',
-      ease: 'power1.out',
+      ease: 'power2.inOut',
       scrollTrigger: {
         trigger: container,
-        start: 'top 40%',
-        end: 'top 10%',
+        start: 'top 60%',
+        end: 'top 5%',
         scrub: true
       }
     })
