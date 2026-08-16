@@ -15,9 +15,11 @@ export default function AboutMeText() {
     const container = containerRef.current
     const box = boxRef.current
 
+    gsap.set(box, { borderRadius: '60%' })
+
     gsap.to(box, {
       rotation: 360,
-      borderRadius: '60%',
+      borderRadius: '0',
       duration: 1,
       ease: 'power2.inOut',
       scrollTrigger: {
@@ -30,6 +32,7 @@ export default function AboutMeText() {
     gsap.to(box, {
       backgroundColor: 'var(--color-secondary)',
       ease: 'power2.inOut',
+      rotation: 720,
       scrollTrigger: {
         trigger: container,
         start: 'top 60%',
