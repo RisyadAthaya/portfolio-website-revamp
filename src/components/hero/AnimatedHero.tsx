@@ -37,6 +37,7 @@ export default function AnimatedHero() {
           yPercent: 0,
           duration: 1.5,
           ease: 'power1.out',
+          delay: 1,
         })
         .to(videoElement, {
           opacity: 1,
