@@ -105,7 +105,7 @@ export default function AnimatedHero() {
           preload="auto"
           src="/videos/synthwaveBackground.mp4"
           ref={videoRef}
-          className="min-h-dvh w-full object-cover"
+          className="h-svh w-full object-cover"
         />
       </div>
     </>
