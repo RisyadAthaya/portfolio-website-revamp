@@ -2,8 +2,8 @@
 @import 'tailwind-scrollbar-hide/v4';
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
   --color-primary: #69d4ff;
   --color-secondary: #ff5400;
   --color-tertiary: #7b2cbf;
@@ -17,13 +17,6 @@
   --text-size-900: 8rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,6 +25,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
 }
