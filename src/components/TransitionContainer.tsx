@@ -47,7 +47,7 @@ export default function TransitionContainer() {
   })
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-dvh flex flex-col z-20 scale-y-100">
+    <div className="fixed top-0 left-0 w-screen h-dvh flex flex-col z-20 scale-y-100 pointer-events-none">
       <div id="transition-row-1" className={transitionClasses}>
         <div ref={blocksRef} className={blockClassesRow1}></div>
         <div ref={blocksRef} className={blockClassesRow1}></div>
