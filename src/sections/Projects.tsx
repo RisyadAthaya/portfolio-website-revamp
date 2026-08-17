@@ -1,4 +1,4 @@
-import ProjectsCarousel from "@/src/components/projects/ProjectsCarousel";
+import ProjectsCarousel from '@/src/components/projects/ProjectsCarousel'
 
 export default function Projects() {
   return (

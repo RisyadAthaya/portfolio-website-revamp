@@ -1,5 +1,5 @@
-import AboutMeText from "@/src/components/aboutme/AboutMeText";
-import AnimatedSun from "@/src/components/aboutme/AnimatedSun";
+import AboutMeText from '@/src/components/aboutme/AboutMeText'
+import AnimatedSun from '@/src/components/aboutme/AnimatedSun'
 
 export default function AboutMe() {
   return (

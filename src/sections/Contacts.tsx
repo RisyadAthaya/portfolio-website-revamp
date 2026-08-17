@@ -1,15 +1,15 @@
 const LINKS = [
   {
     text: 'Email',
-    link: 'mailto:risyad.athaya@ristek.cs.ui.ac.id'
+    link: 'mailto:risyad.athaya@ristek.cs.ui.ac.id',
   },
   {
     text: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/risyadathaya/'
+    link: 'https://www.linkedin.com/in/risyadathaya/',
   },
   {
     text: 'Github',
-    link: 'https://github.com/RisyadAthaya'
+    link: 'https://github.com/RisyadAthaya',
   },
 ]
 

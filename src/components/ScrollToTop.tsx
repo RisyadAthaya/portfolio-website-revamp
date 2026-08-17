@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
 export default function ScrollToTop() {
   useEffect(() => {
     if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+      window.history.scrollRestoration = 'manual'
     }
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
 
     return () => {
       if ('scrollRestoration' in window.history) {
-        window.history.scrollRestoration = 'auto';
+        window.history.scrollRestoration = 'auto'
       }
-    };
-  }, []);
+    }
+  }, [])
 
-  return null;
+  return null
 }
