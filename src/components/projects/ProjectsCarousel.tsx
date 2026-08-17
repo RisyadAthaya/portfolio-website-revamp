@@ -67,8 +67,8 @@ export default function ProjectsCarousel() {
   }, [emblaApi, onInit, onSelect])
 
   return (
-    <div className="flex flex-col items-center relative max-w-xs md:max-w-3xl mx-auto py-8 group">
-      <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
+    <div className="flex flex-col items-center relative w-full md:max-w-3xl mx-auto py-8 group">
+      <div className="overflow-hidden rounded-none md:rounded-xl" ref={emblaRef}>
         <div className="flex">
           {SLIDES.map((slide) => (
             <div className="flex-[0_0_100%] min-w-0 relative bg-gray-100" key={slide.id}>
@@ -77,7 +77,7 @@ export default function ProjectsCarousel() {
                 alt={slide.title}
                 className="w-full h-full object-cover block"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 pt-12">
+              <div className="absolute -bottom-1 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6 pt-12">
                 <div className="flex flex-row items-center justify-between">
                   <h3 className="text-white text-2xl font-bold tracking-wide">
                     {slide.title}
