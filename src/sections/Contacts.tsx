@@ -16,7 +16,9 @@ const LINKS = [
 export default function Contacts() {
   return (
     <div className="flex flex-row flex-wrap items-center justify-center gap-4 md:justify-between w-full px-16 py-8">
-      <p className="text-size-200">Let&apos;s work together!</p>
+      <p className="text-center text-size-100">
+        Created by Risyad Athaya M. © 2026 - All Rights Reserved
+      </p>
       <ul className="flex flex-row flex-wrap items-center justify-between gap-8">
         {LINKS.map((link) => (
           <li key={link.text}>
